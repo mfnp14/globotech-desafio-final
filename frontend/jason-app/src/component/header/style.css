@@ -36,6 +36,12 @@
     color: #FFC300;
 }
 
+.inlineContent {
+    display: flex;
+    justify-content: space-between;
+    width: 16vw;
+}
+
 .buttonPrimary {
     background-color: #FFC300;
     border: 1px solid #FFC300;
@@ -44,7 +50,7 @@
 }
 
 .buttonPrimary:hover {
-    background-color: white;
+    background-color: #5463FF;
     border: 1px solid white;
     border-radius: 8px;
     transition-delay: 70ms;
@@ -58,5 +64,25 @@
 }
 
 .textButtonPrimary:hover {
+    color: white;
+}
+
+.buttonSecondary {
+    background-color: none;
+    transition-delay: 70ms;
+}
+
+.buttonSecondary:hover {
+    transition-delay: 70ms;
+    cursor: pointer;
+}
+
+.textButtonSecondary {
+    padding: 12px 14px 12px 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.textButtonSecondary:hover {
     color: #FFC300;
 }
