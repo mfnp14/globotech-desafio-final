@@ -1,53 +1,73 @@
 import { Link } from "react-router-dom";
 import Header from "../../component/header";
 import imagePromotional from "../../assets/pana.png";
-import "./style.css";
+import {
+  Brand,
+  BrandName,
+  ButtonPrimaryLanding,
+  ButtonSecondaryLanding,
+  ContainerLanding,
+  ContentBrand,
+  ContentButton,
+  DescriptionText,
+  FirstName,
+  ImagePromotional,
+  LastName,
+  LogoDetailBrand,
+  SloganText,
+  TextButtonPrimaryLanding,
+  TextButtonSecondaryLanding,
+} from "./style";
 import Footer from "../../component/footer";
 
 const Landing = () => {
   return (
     <>
       <Header />
-      <div className={"containerLanding"}>
-        <div className={"contentBrand"}>
-          <section className={"brand"}>
-            <h2 className={"logoLeftBrand"}>{"{"}</h2>
-            <section className={"brandName"}>
-              <h4 className={"firstName"}>JASON</h4>
-              <h4 className={"lastName"}>FOOD</h4>
-            </section>
-            <h2 className={"logoRightBrand"}>{"}"}</h2>
-          </section>
+      <ContainerLanding>
+        <ContentBrand>
+          <Brand>
+            <LogoDetailBrand>{"{"}</LogoDetailBrand>
+            <BrandName>
+              <FirstName>JASON</FirstName>
+              <LastName>FOOD</LastName>
+            </BrandName>
+            <LogoDetailBrand>{"}"}</LogoDetailBrand>
+          </Brand>
 
-          <p className={"sloganText"}>
+          <SloganText>
             Não deixe que a fome te pegue desprevenido, esteja sempre preparado
             para matar aquilo que está te matando.
-          </p>
+          </SloganText>
 
-          <p className={"descriptionText"}>
+          <DescriptionText>
             Com o Jason você não morre de fome, você pode procurar suas comidas
             favoritas e ainda criar um menu com base nos dias da semana. Tenha
             todos os restaurantes na palma da sua mão e adicione seus pratos
             favoritos de qualquer lugar.
-          </p>
+          </DescriptionText>
 
-          <section className={"contentButton"}>
-            <Link to={"/"}>
-              <section className={"buttonSecondaryLanding"}>
-                <p className={"textButtonSecondaryLanding"}>Ver restaurantes</p>
-              </section>
-            </Link>
+          <ContentButton>
+            <ButtonSecondaryLanding>
+              <Link to={"/"}>
+                {/* <TextButtonSecondaryLanding> */}
+                Ver restaurantes
+                {/* </TextButtonSecondaryLanding> */}
+              </Link>
+            </ButtonSecondaryLanding>
 
-            <Link to={"/"}>
-              <section className={"buttonPrimaryLanding"}>
-                <p className={"textButtonPrimaryLanding"}>Criar cardápio</p>
-              </section>
-            </Link>
-          </section>
-        </div>
+            <ButtonPrimaryLanding>
+              <Link to={"/"}>
+                {/* <TextButtonPrimaryLanding> */}
+                Criar cardápio
+                {/* </TextButtonPrimaryLanding> */}
+              </Link>
+            </ButtonPrimaryLanding>
+          </ContentButton>
+        </ContentBrand>
 
-        <img className={"imagePromotional"} src={imagePromotional} />
-      </div>
+        <ImagePromotional src={imagePromotional} />
+      </ContainerLanding>
       <Footer />
     </>
   );
