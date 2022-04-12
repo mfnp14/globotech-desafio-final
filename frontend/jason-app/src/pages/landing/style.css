@@ -1,0 +1,52 @@
+.containerLanding {
+    display: flex;
+    width: 80vw;
+    margin-top: 8%;
+    margin-left: 6%;
+    margin-right: 6%;
+    justify-content: space-between;
+}
+
+.contentBrand {
+    width: 42vw;
+}
+
+.logoLeftBrand {
+    font-size: 160pt;
+    color: #5463FF;
+    margin-right: 2%;
+}
+
+.brandName {
+    text-align: left;
+}
+
+.firstName {
+    margin-top: 10%;
+    font-size: 42pt;
+    color: #FFC300;
+    margin-bottom: 0;
+}
+
+.lastName {
+    font-size: 72pt;
+    color: #FF1818;
+    margin-top: -20px;
+}
+
+.logoRightBrand {
+    font-size: 160pt;
+    color: #5463FF;
+    margin-left: 2%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.imagePromotional {
+    height: 40vh;
+    width: 24vw;
+}
+
