@@ -28,5 +28,5 @@ export class User extends BaseEntity {
   createdDate: Date;
 
   @UpdateDateColumn()
-  updatedData: Date;
+  updatedDate: Date;
 }
