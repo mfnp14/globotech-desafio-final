@@ -12,7 +12,7 @@
 }
 
 .logoLeftBrand {
-    font-size: 160pt;
+    font-size: 154pt;
     color: #5463FF;
     margin-right: 2%;
 }
@@ -26,16 +26,18 @@
     font-size: 42pt;
     color: #FFC300;
     margin-bottom: 0;
+    font-weight: bold;
 }
 
 .lastName {
-    font-size: 72pt;
+    font-size: 84pt;
     color: #FF1818;
     margin-top: -20px;
+    font-weight: bold;
 }
 
 .logoRightBrand {
-    font-size: 160pt;
+    font-size: 154pt;
     color: #5463FF;
     margin-left: 2%;
 }
@@ -45,8 +47,25 @@
     align-items: center;
 }
 
+.sloganText {
+    font-style: italic;
+    font-size: 12pt;
+    font-weight: 100;
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+.descriptionText {
+    font-size: 14pt;
+    width: 90%;
+    color: #7D7D7D;
+    margin-left: 2%;
+}
+
 .imagePromotional {
-    height: 40vh;
-    width: 24vw;
+    height: 50vh;
+    width: 28vw;
 }
 
