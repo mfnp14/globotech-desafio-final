@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  database:
+    image: postgres:9.6
+    container_name: "jasonfood"
+    environment:
+    - POSTGRES_DB=jason
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - TZ=UTC
+    volumes:
+      - "/var/lib/postgresql/data"
+    ports:
+      - 5432:5432
