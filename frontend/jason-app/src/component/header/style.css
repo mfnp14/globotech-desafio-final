@@ -44,7 +44,8 @@
 }
 
 .buttonPrimary:hover {
-    background-color: #ECECEC;
+    background-color: white;
+    border: 1px solid white;
     border-radius: 8px;
     transition-delay: 70ms;
     cursor: pointer;
@@ -52,7 +53,7 @@
 
 .textButtonPrimary {
     padding: 12px 14px 12px 14px;
-    color: #ECECEC;
+    color: white;
     cursor: pointer;
 }
 
