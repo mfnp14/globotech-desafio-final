@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "../../component/header";
 import imagePromotional from "../../assets/pana.png";
 import "./style.css";
+import Footer from "../../component/footer";
 
 const Landing = () => {
   return (
@@ -47,6 +48,7 @@ const Landing = () => {
 
         <img className={"imagePromotional"} src={imagePromotional} />
       </div>
+      <Footer />
     </>
   );
 };
