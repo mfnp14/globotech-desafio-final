@@ -30,16 +30,16 @@ const Landing = () => {
             favoritos de qualquer lugar.
           </p>
 
-          <section className={"contentButtons"}>
+          <section className={"contentButton"}>
             <Link to={"/"}>
-              <section className={"buttonSecondary"}>
-                <p className={"textButtonSecondary"}>Criar cardápio</p>
+              <section className={"buttonSecondaryLanding"}>
+                <p className={"textButtonSecondaryLanding"}>Criar cardápio</p>
               </section>
             </Link>
 
             <Link to={"/"}>
-              <section className={"buttonPrimary"}>
-                <p className={"textButtonPrimary"}>Criar cardápio</p>
+              <section className={"buttonPrimaryLanding"}>
+                <p className={"textButtonPrimaryLanding"}>Criar cardápio</p>
               </section>
             </Link>
           </section>
