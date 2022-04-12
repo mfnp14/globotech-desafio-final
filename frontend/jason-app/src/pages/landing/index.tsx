@@ -1,7 +1,11 @@
+import Header from "../../component/header"
 
 const Landing = () => {
   return (
-    <div>landing</div>
+    <div className={'containerLanding'}>
+      <Header />
+
+    </div>
   )
 }
 
