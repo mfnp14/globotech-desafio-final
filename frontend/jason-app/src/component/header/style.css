@@ -1,8 +1,6 @@
 .containerHeader {
     background-color: #5463FF;
     height: 8vh;
-    padding-top: 4px;
-    padding-bottom: 4px;
     padding-left: 42px;
     padding-right: 42px;
     display: flex;
@@ -14,7 +12,6 @@
     display: flex;
     align-items: center;
     margin-left: 2%;
-    margin-top: 4px;
     cursor: pointer;
 }
 
