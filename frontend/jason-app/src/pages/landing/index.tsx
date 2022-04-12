@@ -33,7 +33,7 @@ const Landing = () => {
           <section className={"contentButton"}>
             <Link to={"/"}>
               <section className={"buttonSecondaryLanding"}>
-                <p className={"textButtonSecondaryLanding"}>Criar cardápio</p>
+                <p className={"textButtonSecondaryLanding"}>Ver restaurantes</p>
               </section>
             </Link>
 
