@@ -8,7 +8,7 @@ const Header = () => {
       <Link to={'/'}>
         <section className={"logoNav"}>
           <h2 className={"logoLeft"}>{"{"}</h2>
-          <Icon icon="carbon:json" height={72} color="#ECECEC" />
+          <Icon className={"iconLogo"} icon="carbon:json" height={72} color="#ECECEC" />
           <h2 className={"logoRight"}>{"}"}</h2>
         </section>
       </Link>
