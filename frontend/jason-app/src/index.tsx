@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import "./App.css";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+
+// Pages 
+import Home from './pages/home';
+import Landing from './pages/landing';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Landing />}></Route>
+            <Route path="/home" element={<Home />}></Route>
+          </Routes>
+      </BrowserRouter>
+  </>
   </React.StrictMode>,
   document.getElementById('root')
 );
