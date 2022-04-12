@@ -11,6 +11,8 @@ import reportWebVitals from './reportWebVitals';
 // Pages 
 import Home from './pages/home';
 import Landing from './pages/landing';
+import Register from './pages/register';
+import Login from './pages/login';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +21,8 @@ ReactDOM.render(
           <Routes>
             <Route path="/" element={<Landing />}></Route>
             <Route path="/home" element={<Home />}></Route>
+            <Route path="/register" element={<Register />}></Route>
+            <Route path="/login" element={<Login />}></Route>
           </Routes>
       </BrowserRouter>
   </>
