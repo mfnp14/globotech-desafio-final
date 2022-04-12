@@ -15,8 +15,8 @@ import {
   LastName,
   LogoDetailBrand,
   SloganText,
-  TextButtonPrimaryLanding,
-  TextButtonSecondaryLanding,
+  StyledLinkPrimary,
+  StyledLinkSecondary,
 } from "./style";
 import Footer from "../../component/footer";
 
@@ -49,19 +49,13 @@ const Landing = () => {
 
           <ContentButton>
             <ButtonSecondaryLanding>
-              <Link to={"/"}>
-                {/* <TextButtonSecondaryLanding> */}
+              <StyledLinkSecondary to={"/"}>
                 Ver restaurantes
-                {/* </TextButtonSecondaryLanding> */}
-              </Link>
+              </StyledLinkSecondary>
             </ButtonSecondaryLanding>
 
             <ButtonPrimaryLanding>
-              <Link to={"/"}>
-                {/* <TextButtonPrimaryLanding> */}
-                Criar cardápio
-                {/* </TextButtonPrimaryLanding> */}
-              </Link>
+              <StyledLinkPrimary to={"/"}>Criar cardápio</StyledLinkPrimary>
             </ButtonPrimaryLanding>
           </ContentButton>
         </ContentBrand>

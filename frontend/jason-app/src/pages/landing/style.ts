@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ContainerLanding = styled.div`
   display: flex;
   width: 80vw;
-  margin-top: 10%;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin: 10px 8% 47px 5%;
   justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
 `;
 
 export const ContentBrand = styled.div`
@@ -66,10 +67,8 @@ export const DescriptionText = styled.p`
 
 export const ContentButton = styled.div`
   display: flex;
-  width: 38%;
   margin-top: 4%;
-  margin-left: 2%;
-  justify-content: space-around;
+  justify-content: space-between;
   column-gap: 10%;
 `;
 
@@ -79,8 +78,11 @@ export const ButtonPrimaryLanding = styled.button`
   border-radius: 8px;
   transition-delay: 70ms;
   width: 150px;
+  padding: 12px 14px 12px 14px;
+  color: #ececec;
+  cursor: pointer;
 
-  & :hover {
+  &:hover {
     background-color: white;
     border-radius: 8px;
     transition-delay: 70ms;
@@ -89,20 +91,17 @@ export const ButtonPrimaryLanding = styled.button`
   }
 `;
 
-export const TextButtonPrimaryLanding = styled.p`
-  padding: 12px 14px 12px 14px;
-  color: #ececec;
-  cursor: pointer;
-`;
-
 export const ButtonSecondaryLanding = styled.button`
-  background-color: none;
+  background-color: #fff;
   border: 1px solid #ffc300;
   border-radius: 8px;
   transition-delay: 70ms;
   width: 150px;
+  padding: 12px 14px 12px 14px;
 
-  & :hover {
+  cursor: pointer;
+
+  &:hover {
     background-color: #ffc300;
     border-radius: 8px;
     transition-delay: 70ms;
@@ -111,13 +110,26 @@ export const ButtonSecondaryLanding = styled.button`
   }
 `;
 
-export const TextButtonSecondaryLanding = styled.p`
-  padding: 12px 14px 12px 14px;
-  color: #ffc300;
-  cursor: pointer;
-`;
-
 export const ImagePromotional = styled.img`
   height: 50vh;
   width: 28vw;
+`;
+
+export const StyledLinkPrimary = styled(Link)`
+  color: #fff;
+  font-weight: bold;
+
+  &:hover {
+    color: #FF1818;
+    font-weight: bold;
+`;
+
+export const StyledLinkSecondary = styled(Link)`
+  color: #ffc300;
+  width: 100%;
+
+  &:hover {
+    color: #fff;
+    font-weight: bold;
+  }
 `;
