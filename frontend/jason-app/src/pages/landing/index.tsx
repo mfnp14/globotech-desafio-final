@@ -23,7 +23,6 @@ import Footer from "../../component/footer";
 const Landing = () => {
   return (
     <>
-      <Header />
       <ContainerLanding>
         <ContentBrand>
           <Brand>

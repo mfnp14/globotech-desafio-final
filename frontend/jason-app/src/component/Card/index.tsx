@@ -42,6 +42,7 @@ const Card: React.FC<InfoProps> = ({ data }: InfoProps) => {
               </CardLogo>
               <CardBottom>
                 <p>Nulla deserunt proident eu ipsum nisi proident ad.</p>
+                <button>ver cardápio</button>
               </CardBottom>
             </Content>
           </CardContainer>

@@ -6,7 +6,7 @@ export const ContainerLanding = styled.div`
   width: 80vw;
   margin: 10px 8% 7% 5%;
   justify-content: space-between;
-  overflow: hidden;
+  //overflow: hidden;
   align-items: center;
 `;
 

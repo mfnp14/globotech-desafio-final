@@ -4,12 +4,16 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto;
+  row-gap: 150px;
 `;
 
 export const CardContainer = styled.div`
   width: 250px;
   min-width: 250px;
-  height: 188px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,10 +55,9 @@ export const CardTop = styled.div`
     width: 100%;
     text-align: center;
     letter-spacing: 0.05em;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 40px;
   }
-
   > svg {
     padding-left: 30px;
     margin-top: 30px;
@@ -67,8 +70,8 @@ export const CardTop = styled.div`
 export const CardLogo = styled.div`
   display: flex;
   position: relative;
-  height: 180px;
-  width: 180px;
+  height: 130px;
+  width: 130px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -84,21 +87,22 @@ export const CardLogo = styled.div`
 
 export const CardBottom = styled.div`
   background: #ffffff;
-  //height: 180px;
+  height: 80px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
-  border-radius: 25% 25% 25px 25px;
   > p {
     width: 100%;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     justify-content: center;
     letter-spacing: 0.05em;
     color: #25282b;
+    margin-bottom: 20px;
   }
 `;
