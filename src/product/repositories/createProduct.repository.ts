@@ -4,18 +4,20 @@ import { Product } from '../entities/product.entity';
 
 @EntityRepository(Product)
 export class ProductRepository extends Repository<Product> {
-  async createProduct(createProductDto: CreateProductDto): Promise<Product> {
-    const { name, urlImage, description, price, extra } = createProductDto;
+  async createProduct(createProductDto: CreateProductDto): Promise<any> {
+    const { name, urlImage, description, price, extras } = createProductDto;
 
-    const product = this.create({
-      name,
-      urlImage,
-      description,
-      price,
-      extra,
-      createdDate: new Date(),
-      updatedDate: new Date(),
-    });
+    const product = this.create([
+      {
+        name,
+        urlImage,
+        description,
+        price,
+        extras,
+        createdDate: new Date(),
+        updatedDate: new Date(),
+      },
+    ]);
 
     return await this.save(product);
   }
