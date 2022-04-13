@@ -3,5 +3,7 @@ export class CreateProductDto {
   urlImage: string;
   description: string;
   price: number;
-  extras: string[];
+  extras: string;
+  createdDate: Date;
+  updatedDate: Date;
 }
