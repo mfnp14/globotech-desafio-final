@@ -24,8 +24,8 @@ export class Product extends BaseEntity {
   @Column({ nullable: false, type: 'float' })
   price: number;
 
-  @Column({ nullable: false, array: true })
-  extra: string[];
+  @Column({ type: 'varchar' })
+  extras: string;
 
   @CreateDateColumn()
   createdDate: Date;
