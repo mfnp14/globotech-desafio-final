@@ -1,37 +1,40 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import "./style.css";
+import { ContainerHeader } from "./style";
+import {
+  LogoNav,
+  LogoDetailBrand,
+  InlineContent,
+  ButtonPrimary,
+  ButtonSecondary,
+} from "./style.ts";
 
 const Header = () => {
   return (
-    <div className={"containerHeader"}>
+    <ContainerHeader>
       <Link to={"/"}>
-        <section className={"logoNav"}>
-          <h2 className={"logoLeft"}>{"{"}</h2>
+        <LogoNav>
+          <LogoDetailBrand>{"{"}</LogoDetailBrand>
           <Icon
             className={"iconLogo"}
             icon="carbon:json"
             height={72}
             color="#ECECEC"
           />
-          <h2 className={"logoRight"}>{"}"}</h2>
-        </section>
+          <LogoDetailBrand>{"}"}</LogoDetailBrand>
+        </LogoNav>
       </Link>
 
-      <section className={'inlineContent'}>
+      <InlineContent>
         <Link to={"/home"}>
-          <section className={"buttonSecondary"}>
-            <p className={"textButtonSecondary"}>Criar conta</p>
-          </section>
+          <ButtonSecondary>Criar conta</ButtonSecondary>
         </Link>
 
         <Link to={"/home"}>
-          <section className={"buttonPrimary"}>
-            <p className={"textButtonPrimary"}>Entrar na plataforma</p>
-          </section>
+          <ButtonPrimary>Entrar na plataforma</ButtonPrimary>
         </Link>
-      </section>
-    </div>
+      </InlineContent>
+    </ContainerHeader>
   );
 };
 

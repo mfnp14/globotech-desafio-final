@@ -3,7 +3,7 @@ import { ContainerFooter } from "./style";
 const Footer = () => {
   return (
     <ContainerFooter>
-      <p className={"textFooter"}>Globotech - Academy</p>
+      <p>Globotech - Academy</p>
     </ContainerFooter>
   );
 };

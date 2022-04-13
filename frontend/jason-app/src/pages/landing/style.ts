@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ContainerLanding = styled.div`
   display: flex;
   width: 80vw;
-  margin: 10px 8% 47px 5%;
+  margin: 10px 8% 7% 5%;
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
@@ -68,7 +68,7 @@ export const DescriptionText = styled.p`
 export const ContentButton = styled.div`
   display: flex;
   margin-top: 4%;
-  justify-content: space-between;
+  justify-content: flex-start;
   column-gap: 10%;
 `;
 
@@ -98,6 +98,7 @@ export const ButtonSecondaryLanding = styled.button`
   transition-delay: 70ms;
   width: 150px;
   padding: 12px 14px 12px 14px;
+  color: #ffc300;
 
   cursor: pointer;
 

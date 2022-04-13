@@ -7,7 +7,7 @@ export const ContainerFooter = styled.div`
   text-align: center;
   padding-top: 8px;
 
-  & .textFooter {
+  & p {
     color: #313131;
   }
 `;

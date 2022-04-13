@@ -48,15 +48,13 @@ const Landing = () => {
           </DescriptionText>
 
           <ContentButton>
-            <ButtonSecondaryLanding>
-              <StyledLinkSecondary to={"/"}>
-                Ver restaurantes
-              </StyledLinkSecondary>
-            </ButtonSecondaryLanding>
+            <StyledLinkSecondary to={"/"}>
+              <ButtonSecondaryLanding>Ver restaurantes</ButtonSecondaryLanding>
+            </StyledLinkSecondary>
 
-            <ButtonPrimaryLanding>
-              <StyledLinkPrimary to={"/"}>Criar cardápio</StyledLinkPrimary>
-            </ButtonPrimaryLanding>
+            <StyledLinkPrimary to={"/"}>
+              <ButtonPrimaryLanding>Criar cardápio</ButtonPrimaryLanding>
+            </StyledLinkPrimary>
           </ContentButton>
         </ContentBrand>
 
