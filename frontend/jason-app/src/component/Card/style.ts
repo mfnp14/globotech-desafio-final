@@ -5,9 +5,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 80vw;
   height: auto;
-  row-gap: 150px;
+  row-gap: 100px;
+  column-gap: 8px;
 `;
 
 export const CardContainer = styled.div`
@@ -19,7 +20,6 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  margin: auto 12px;
 `;
 
 export const Content = styled.div`

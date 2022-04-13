@@ -1,6 +1,5 @@
 import React from "react";
 import yellowbg from "../../assets/yellow_bg.jpg";
-import { BsHeart } from "react-icons/bs";
 
 import {
   Container,
@@ -34,7 +33,6 @@ const Card: React.FC<InfoProps> = ({ data }: InfoProps) => {
             <Content>
               <img src={yellowbg} alt="background" />
               <CardTop>
-                <BsHeart />
                 <h1> {item.name} </h1>
               </CardTop>
               <CardLogo>

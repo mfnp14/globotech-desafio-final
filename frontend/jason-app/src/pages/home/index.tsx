@@ -1,5 +1,5 @@
 import Card, { InfoData } from "../../component/Card";
-import { Container, HomeContent } from "./style";
+import { Container, HomeContent, HomeHeader } from "./style";
 
 const Home = () => {
   const restaurants: InfoData[] = [
@@ -55,15 +55,19 @@ const Home = () => {
 
   return (
     <Container>
-      <HomeContent>
+      <HomeHeader>
         <h1>Bem Vindo</h1>
         <p>
           Agora você pode cadastrar restaurantes e produtos e adicionar ao seus
           favoritos
         </p>
         <button>Começar</button>
+      </HomeHeader>
+
+      <HomeContent>
+        <h2>Meus restaurantes</h2>
+        <Card data={restaurants} />
       </HomeContent>
-      <Card data={restaurants} />
     </Container>
   );
 };

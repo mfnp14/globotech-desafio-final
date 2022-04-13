@@ -11,11 +11,23 @@ export const Container = styled.div`
   margin-bottom: 50px;
 `;
 
-export const HomeContent = styled.div`
-  height: 30vh;
+export const HomeHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+`;
+
+export const HomeTitle = styled.h1`
+  font-size: 2.5rem;
+`;
+
+export const HomeContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 50px;
+  width: 80vw;
 `;
