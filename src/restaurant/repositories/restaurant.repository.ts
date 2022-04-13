@@ -4,8 +4,11 @@ import { Restaurant } from '../entities/restaurant.entity';
 
 @EntityRepository(Restaurant)
 export class RestaurantRepository extends Repository<Restaurant> {
-  async createRestaurant(createRestaurantDto: CreateRestaurantDto): Promise<Restaurant> {
-    const { name, address, description, logoUrl, manager } = createRestaurantDto;
+  async createRestaurant(
+    createRestaurantDto: CreateRestaurantDto,
+  ): Promise<Restaurant> {
+    const { name, address, description, logoUrl, manager } =
+      createRestaurantDto;
 
     const restaurant = this.create({
       name,
@@ -18,5 +21,20 @@ export class RestaurantRepository extends Repository<Restaurant> {
     });
 
     return await this.save(restaurant);
+  }
+
+  async getListRestaurant(): Promise<any> {
+    const queryGetRestaurants = await this.createQueryBuilder('restaurant')
+      .select([
+        'restaurant.id',
+        'restaurant.name',
+        'restaurant.address',
+        'restaurant.description',
+        'restaurant.logoUrl',
+        'restaurant.manager',
+      ])
+      .getMany();
+
+    return queryGetRestaurants;
   }
 }
