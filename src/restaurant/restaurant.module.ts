@@ -1,13 +1,15 @@
-import { Module } from '@nestjs/common';
-import { RestaurantService } from './useCases/createRestaurant/restaurant.service';
-import { RestaurantController } from './useCases/createRestaurant/restaurant.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Module } from '@nestjs/common';
 import { Restaurant } from './entities/restaurant.entity';
 import { RestaurantRepository } from './repositories/restaurant.repository';
+import { CreateRestaurantService } from './useCases/createRestaurant/createRestaurant.service';
+import { CreateRestaurantController } from './useCases/createRestaurant/createRestaurant.controller';
+import { ListRestaurantController } from './useCases/listRestaurant/listRestaurant.contoller';
+import { ListRestaurantService } from './useCases/listRestaurant/listRestaurant.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Restaurant, RestaurantRepository])],
-  controllers: [RestaurantController],
-  providers: [RestaurantService]
+  controllers: [CreateRestaurantController, ListRestaurantController],
+  providers: [CreateRestaurantService, ListRestaurantService],
 })
 export class RestaurantModule {}
