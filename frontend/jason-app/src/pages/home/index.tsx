@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import api from "../../services/api";
 import Card from "../../component/Card";
 import {
@@ -9,9 +10,11 @@ import {
   HomeTitle,
   Subtitle,
 } from "./style";
+import GenericButton from "../../component/Button";
 
 const Home = () => {
   const [restauranteData, setRestauranteData] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     api
@@ -21,6 +24,10 @@ const Home = () => {
       });
   }, []);
 
+  const goToPage = (page: any) => {
+    history.push(`/${page}`);
+  };
+
   return (
     <Container>
       <HomeHeader>
@@ -29,7 +36,7 @@ const Home = () => {
           Agora você pode cadastrar restaurantes e produtos e adicionar ao seus
           favoritos
         </p>
-        <ButtonPrimary>Começar</ButtonPrimary>
+        <GenericButton secondary onclick={() => goToPage("register")} label={"Comerçar"} />
       </HomeHeader>
 
       <HomeContent>
