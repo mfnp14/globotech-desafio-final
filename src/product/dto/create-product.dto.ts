@@ -1,9 +1,9 @@
 export class CreateProductDto {
   name: string;
+  idRestaurant: string;
   urlImage: string;
   description: string;
   price: number;
-  extras: string;
   createdDate: Date;
   updatedDate: Date;
 }
