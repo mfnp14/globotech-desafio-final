@@ -40,10 +40,6 @@ export class RestaurantRepository extends Repository<Restaurant> {
       .leftJoinAndSelect('restaurant.products', 'product')
       .getOne();
 
-    const response = {
-      restaurante: queryGetRestaurants,
-    };
-
-    return [response];
+    return [queryGetRestaurants];
   }
 }
