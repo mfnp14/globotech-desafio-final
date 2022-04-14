@@ -3,8 +3,6 @@ import imagePromotional from "../../assets/pana.png";
 import {
   Brand,
   BrandName,
-  ButtonPrimaryLanding,
-  ButtonSecondaryLanding,
   ContainerLanding,
   ContentBrand,
   ContentButton,
@@ -14,8 +12,6 @@ import {
   LastName,
   LogoDetailBrand,
   SloganText,
-  StyledLinkPrimary,
-  StyledLinkSecondary,
 } from "./style";
 import Footer from "../../component/footer";
 import GenericButton from "../../component/Button";

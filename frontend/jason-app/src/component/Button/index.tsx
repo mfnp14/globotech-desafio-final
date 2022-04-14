@@ -2,7 +2,6 @@ import React from "react";
 import { GenericButtonContainer } from "./styles";
 
 interface GenericButtonProps {
-  icon?: JSX.Element;
   label?: string | number;
   primary?: boolean;
   secondary?: boolean;
