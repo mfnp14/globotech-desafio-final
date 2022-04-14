@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import Header from "../../component/header";
+import { useHistory } from "react-router-dom";
 import imagePromotional from "../../assets/pana.png";
 import {
   Brand,
@@ -19,8 +18,15 @@ import {
   StyledLinkSecondary,
 } from "./style";
 import Footer from "../../component/footer";
+import GenericButton from "../../component/Button";
 
 const Landing = () => {
+  const history = useHistory();
+
+  const goToPage = (page: any) => {
+    history.push(`/${page}`);
+  };
+
   return (
     <>
       <ContainerLanding>
@@ -47,13 +53,19 @@ const Landing = () => {
           </DescriptionText>
 
           <ContentButton>
-            <StyledLinkSecondary to={"/"}>
-              <ButtonSecondaryLanding>Ver restaurantes</ButtonSecondaryLanding>
-            </StyledLinkSecondary>
+            <GenericButton
+              type="button"
+              label={"ver restaurantes"}
+              secondary
+              onclick={() => goToPage("home")}
+            />
 
-            <StyledLinkPrimary to={"/"}>
-              <ButtonPrimaryLanding>Criar cardápio</ButtonPrimaryLanding>
-            </StyledLinkPrimary>
+            <GenericButton
+              type="button"
+              label={"cadastrar cardápio"}
+              primary
+              onclick={() => goToPage("register")}
+            />
           </ContentButton>
         </ContentBrand>
 

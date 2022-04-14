@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
 // Pages
@@ -17,12 +17,12 @@ ReactDOM.render(
     <>
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<Landing />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-        </Routes>
+        <Switch>
+          <Route path="/" exact component={Landing} />
+          <Route path="/home" component={Home} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+        </Switch>
         <Footer />
       </BrowserRouter>
     </>
