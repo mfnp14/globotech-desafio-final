@@ -27,20 +27,19 @@ interface InfoProps {
   data: InfoData[];
 }
 
-const Card: React.FC<InfoProps> = ({ data }: InfoProps) => {
+const Card: React.FC<InfoProps> = ({ data }) => {
   const history = useHistory();
 
-  const goToPage = (data) => {
-    history.push(`/menu/${data.id}`);
-    console.log(data.id);
+  const goToPage = () => {
+    history.push(`/menu/${id}`);
+    console.log(id);
   };
 
   return (
     <Container>
       {data.map((item) => {
         return (
-          <CardContainer>
-            key={item.id}
+          <CardContainer key={item.id}>
             <Content>
               <img src={yellowbg} alt="background" />
               <CardTop>
@@ -57,7 +56,7 @@ const Card: React.FC<InfoProps> = ({ data }: InfoProps) => {
                   type="button"
                   label={"ver cardápio"}
                   secondary
-                  onclick={() => goToPage(data.id)}
+                  onclick={() => goToPage()}
                 />
               </CardBottom>
             </Content>
@@ -69,3 +68,6 @@ const Card: React.FC<InfoProps> = ({ data }: InfoProps) => {
 };
 
 export default Card;
+function id(id: any): void {
+  throw new Error("Function not implemented.");
+}
