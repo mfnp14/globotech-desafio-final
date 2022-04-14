@@ -5,15 +5,16 @@ import { Product } from '../entities/product.entity';
 @EntityRepository(Product)
 export class ProductRepository extends Repository<Product> {
   async createProduct(createProductDto: CreateProductDto): Promise<any> {
-    const { name, urlImage, description, price, extras } = createProductDto;
+    const { name, idRestaurant, urlImage, description, price } =
+      createProductDto;
 
     const product = this.create([
       {
         name,
+        idRestaurant,
         urlImage,
         description,
         price,
-        extras,
         createdDate: new Date(),
         updatedDate: new Date(),
       },
