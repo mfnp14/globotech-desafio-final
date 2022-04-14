@@ -31,6 +31,7 @@ export const GenericButtonContainer = styled.span`
     padding: 12px 14px 12px 14px;
     color: #ececec;
     cursor: pointer;
+    width: 170px;
 
     &:hover {
       background-color: white;
@@ -46,7 +47,7 @@ export const GenericButtonContainer = styled.span`
     border: 1px solid #ffc300;
     border-radius: 8px;
     transition-delay: 70ms;
-    width: 150px;
+    width: 170px;
     padding: 12px 14px 12px 14px;
     color: #ffc300;
 

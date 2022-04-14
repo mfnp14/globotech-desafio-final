@@ -4,6 +4,7 @@ export const Container = Styled.div`
 display:flex;
 flex-direction: column;
 width: 100%;
+height: 84.6vh;
 justify-content: center;
 align-items: center;
 
@@ -12,6 +13,12 @@ align-items: center;
     margin-bottom: 30px;
 }
 `;
+
+export const InlineContent = Styled.div`
+display: flex;
+margin-top: 4%;
+justify-content: space-between;
+`
 
 export const Form = Styled.form`
 display:flex;

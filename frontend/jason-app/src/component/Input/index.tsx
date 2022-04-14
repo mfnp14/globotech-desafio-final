@@ -10,8 +10,9 @@ const GenericInput = ({
   onChange,
 }: InputProps) => {
   return (
-    <div className="input">
-      <input 
+    <div>
+      <input
+        style={{ paddingLeft: "14px" }}
         name={name}
         value={value}
         type={type}

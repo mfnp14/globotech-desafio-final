@@ -58,7 +58,7 @@ const Landing = () => {
 
             <GenericButton
               type="button"
-              label={"cadastrar cardápio"}
+              label={"Cadastrar restaurante"}
               primary
               onclick={() => goToPage("register")}
             />

@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const ContainerLanding = styled.div`
   display: flex;
   width: 80vw;
+  height: 71.4vh;
   margin: 10px 8% 6% 5%;
   justify-content: space-between;
   overflow: hidden;

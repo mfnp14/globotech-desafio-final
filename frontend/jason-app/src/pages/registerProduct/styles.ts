@@ -6,6 +6,7 @@ flex-direction: column;
 width: 100%;
 justify-content: center;
 align-items: center;
+height: 84.6vh;
 
 & h1{
     text-align: center;
