@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import api from "../../services/api";
 import {
   Container,
   Content,
@@ -9,7 +11,19 @@ import {
 } from "./styles";
 
 const Menu = () => {
-  const [MenuData, setMenuData] = useState([]);
+  const [menuData, setMenuData] = useState([
+    {
+      id: 1,
+      name: "Picanha defumada",
+      idRestaurant: 1,
+      urlImage:
+        "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/french-restaurant-logo-design-template-2f7896b33ab323cbc1baf240f643e82b_screen.jpg?ts=1597302426",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur aliquet odio nec gravida. Fusce vitae ornare massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur aliquet odio nec gravida. Fusce vitae ornare massa.",
+      price: 20.5,
+      extras: ["Alface", "Bacon", "Cebola"],
+    },
+  ]);
 
   useEffect(() => {
     api.get(`/products`).then((response: { data: any }) => {
@@ -20,15 +34,27 @@ const Menu = () => {
   return (
     <Container>
       <Title>Menu</Title>
-
-      <Content>
-        <ImageContainer>image</ImageContainer>
-        <MenuList>
-          <MenuItem>name</MenuItem>
-          <MenuItem>description</MenuItem>
-        </MenuList>
-        <MenuPrice>R$</MenuPrice>
-      </Content>
+      {menuData.map((item) => {
+        console.log(menuData);
+        return (
+          <Content key={item.id}>
+            <ImageContainer>
+              <img src={item.urlImage} alt={item.name} />
+            </ImageContainer>
+            <MenuList>
+              <MenuItem>{item.name}</MenuItem>
+              <MenuItem>{item.description}</MenuItem>
+              <MenuItem>
+                Extras:{" "}
+                {item.extras.map((extra) => {
+                  return <MenuItem>{extra} </MenuItem>;
+                })}
+              </MenuItem>
+            </MenuList>
+            <MenuPrice>R${item.price}</MenuPrice>
+          </Content>
+        );
+      })}
     </Container>
   );
 };
