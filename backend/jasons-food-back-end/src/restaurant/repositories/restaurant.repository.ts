@@ -38,8 +38,8 @@ export class RestaurantRepository extends Repository<Restaurant> {
         'product.price',
       ])
       .leftJoinAndSelect('restaurant.products', 'product')
-      .getOne();
+      .getMany();
 
-    return [queryGetRestaurants];
+    return queryGetRestaurants;
   }
 }

@@ -30,7 +30,6 @@ export class ProductRepository extends Repository<Product> {
         'product.urlImage',
         'product.name',
         'product.description',
-        'product.extras',
         'product.price',
       ])
       .getMany();

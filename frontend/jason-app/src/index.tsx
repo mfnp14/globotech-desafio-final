@@ -26,6 +26,7 @@ ReactDOM.render(
           <Route path="/register" component={Register} />
           <Route path="/register-product" component={RegisterProduct} />
           <Route path="/menu/:id" component={Menu} />
+          <Route path="/menu" component={Menu} />
         </Switch>
         <Footer />
       </BrowserRouter>

@@ -76,7 +76,7 @@ const Register = () => {
             <GenericInput
               value={logoUrl}
               type="text"
-              placeholder="Nome do restaurante"
+              placeholder="http://minha-logo.com"
               onChange={(e) => setLogoUrl(e.currentTarget.value)}
             />
             <GenericButton
