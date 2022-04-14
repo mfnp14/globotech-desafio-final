@@ -76,16 +76,16 @@ const Register = () => {
           />
           <div style={{ display:'flex', justifyContent: 'space-between'}}>
             <GenericButton
-              secondary
-              type="submit"
-              label={"Cadastrar restaurante"}
-            />
-
-            <GenericButton
               type="button"
               label={"Cadastrar produtos"}
               secondary
             />
+            <GenericButton
+              primary
+              type="submit"
+              label={"Cadastrar restaurante"}
+            />
+
           </div>
         </div>
       </Form>
