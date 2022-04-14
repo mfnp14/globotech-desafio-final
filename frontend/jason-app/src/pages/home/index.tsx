@@ -11,8 +11,6 @@ import {
 } from "./style";
 
 const Home = () => {
-
-
   const [restauranteData, setRestauranteData] = useState([]);
 
   useEffect(() => {

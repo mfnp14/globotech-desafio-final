@@ -11,6 +11,7 @@ import Register from "./pages/registerRestaurant";
 import Login from "./pages/login";
 import Header from "./component/header";
 import Footer from "./component/footer";
+import Menu from "./pages/menu";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,6 +23,7 @@ ReactDOM.render(
           <Route path="/home" component={Home} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
+          <Route path="/menu/:id" component={Menu} />
         </Switch>
         <Footer />
       </BrowserRouter>
