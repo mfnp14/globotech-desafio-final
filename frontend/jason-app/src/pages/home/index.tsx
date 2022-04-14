@@ -16,6 +16,10 @@ const Home = () => {
   const [restauranteData, setRestauranteData] = useState([]);
   const history = useHistory();
 
+  const goToPage = (page: any) => {
+    history.push(`/${page}`);
+  };
+
   useEffect(() => {
     api
       .get(`/restaurant`)
@@ -24,10 +28,7 @@ const Home = () => {
       });
   }, []);
 
-  const goToPage = (page: any) => {
-    history.push(`/${page}`);
-  };
-
+ 
   return (
     <Container>
       <HomeHeader>
