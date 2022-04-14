@@ -20,9 +20,10 @@ export const Content = styled.div`
   column-gap: 10px;
   align-items: center;
   background-color: #ffc300;
-  width: 80%;
+  width: 60%;
   border-radius: 10px;
-  height: 150px;
+  padding: 10px;
+  height: 200px;
   box-shadow: -1px 14px 27px -18px rgba(72, 72, 72, 0.8);
 `;
 
@@ -31,13 +32,18 @@ export const MenuList = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 60%;
+  width: 50%;
 `;
 
 export const MenuItem = styled.li`
   padding: 5px;
   display: flex;
   align-items: center;
+
+  &:first-of-type {
+    font-weight: bold;
+    font-size: 2rem;
+  }
 `;
 
 export const MenuPrice = styled.span`
@@ -50,7 +56,7 @@ export const ImageContainer = styled.div`
 
   & img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
 `;

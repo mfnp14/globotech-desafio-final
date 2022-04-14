@@ -17,7 +17,7 @@ const Menu = () => {
       name: "Picanha defumada",
       idRestaurant: 1,
       urlImage:
-        "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/french-restaurant-logo-design-template-2f7896b33ab323cbc1baf240f643e82b_screen.jpg?ts=1597302426",
+        "https://mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur aliquet odio nec gravida. Fusce vitae ornare massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur aliquet odio nec gravida. Fusce vitae ornare massa.",
       price: 20.5,
@@ -25,17 +25,16 @@ const Menu = () => {
     },
   ]);
 
-  useEffect(() => {
-    api.get(`/products`).then((response: { data: any }) => {
-      setMenuData(response.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   api.get(`/products`).then((response: { data: any }) => {
+  //     setMenuData(response.data);
+  //   });
+  // }, []);
 
   return (
     <Container>
       <Title>Menu</Title>
       {menuData.map((item) => {
-        console.log(menuData);
         return (
           <Content key={item.id}>
             <ImageContainer>
@@ -47,7 +46,7 @@ const Menu = () => {
               <MenuItem>
                 Extras:{" "}
                 {item.extras.map((extra) => {
-                  return <MenuItem>{extra} </MenuItem>;
+                  return <>{extra} </>;
                 })}
               </MenuItem>
             </MenuList>
