@@ -3,9 +3,12 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { Restaurant } from '../../restaurant/entities/restaurant.entity';
 
 @Entity()
 export class Product extends BaseEntity {
@@ -14,6 +17,9 @@ export class Product extends BaseEntity {
 
   @Column({ nullable: false, type: 'varchar', length: 200 })
   name: string;
+
+  @Column({ name: 'id_restaurant' })
+  idRestaurant: string;
 
   @Column({ nullable: false, type: 'varchar' })
   urlImage: string;
@@ -24,12 +30,13 @@ export class Product extends BaseEntity {
   @Column({ nullable: false, type: 'float' })
   price: number;
 
-  @Column({ type: 'varchar' })
-  extras: string;
-
   @CreateDateColumn()
   createdDate: Date;
 
   @UpdateDateColumn()
   updatedDate: Date;
+
+  @ManyToOne(() => Restaurant, (restaurants) => restaurants.products)
+  @JoinColumn({ name: 'id_restaurant', referencedColumnName: 'id' })
+  restaurant: Restaurant;
 }
