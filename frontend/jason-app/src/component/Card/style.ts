@@ -20,6 +20,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #FFC300;
   border-radius: 25px;
 `;
 
@@ -92,6 +93,9 @@ export const CardBottom = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 1px solid #FFC300;
+  border-radius: 20px;
+  border-top: none;
   align-items: center;
   position: relative;
   margin-top: 10px;

@@ -1,4 +1,3 @@
-import Reac, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import yellowbg from "../../assets/yellow_bg.jpg";
 import GenericButton from "../Button";
@@ -17,7 +16,7 @@ export interface InfoData {
   name?: string;
   address?: string;
   description?: string;
-  logo?: string;
+  logoUrl?: string;
   owner?: string;
   price?: number;
   extras?: string[];
@@ -30,10 +29,17 @@ interface InfoProps {
 const Card: React.FC<InfoProps> = ({ data }) => {
   const history = useHistory();
 
+<<<<<<< HEAD
   const goToPage = () => {
     history.push(`/menu/${id}`);
     console.log(id);
   };
+=======
+  // const goToPage = (data) => {
+  //   history.push(`/menu/${data.id}`);
+  //   console.log(data.id);
+  // };
+>>>>>>> master
 
   return (
     <Container>
@@ -46,7 +52,7 @@ const Card: React.FC<InfoProps> = ({ data }) => {
                 <h1> {item.name} </h1>
               </CardTop>
               <CardLogo>
-                <img src={item.logo} alt="logo" />
+                <img src={item.logoUrl} alt="logo" />
               </CardLogo>
               <CardBottom>
                 <p>{item.description}</p>
@@ -56,7 +62,11 @@ const Card: React.FC<InfoProps> = ({ data }) => {
                   type="button"
                   label={"ver cardápio"}
                   secondary
+<<<<<<< HEAD
                   onclick={() => goToPage()}
+=======
+                  // onclick={() => goToPage(data.id)}
+>>>>>>> master
                 />
               </CardBottom>
             </Content>
