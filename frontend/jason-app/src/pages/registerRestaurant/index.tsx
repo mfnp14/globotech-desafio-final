@@ -1,50 +1,95 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import "./style.css";
+import { useHistory } from "react-router-dom";
+import api from "../../services/api";
+import GenericInput from "../../component/Input";
+import GenericButton from "../../component/Button";
+import React, { useState } from "react";
 
-type Restaurante = {
-  id: number;
-  name: string;
-  address: string;
-  description: string;
-  logoUrl: string;
-  manager: string;
-};
+const Register = () => {
+  const [name, setName] = useState<string>("");
+  const [logoUrl, setLogoUrl] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
+  const [manager, setManager] = useState<string>("");
 
-const Cadastro = () => {
-  const { register, handleSubmit } = useForm<Restaurante>();
+  const navigation = useHistory();
+  const history = useHistory();
 
-  const onSubmit = handleSubmit((data) => {
-    alert(JSON.stringify(data));
-  });
+  const goToPage = (page: any) => {
+    history.push(`/${page}`);
+  };
 
+  const storageData = async (e: any) => {
+    console.log(e);
+    try {
+      // e.preventDefault();
+      // const { name, address, logoUrl, description, manager } =
+      //   e.target.elements;
+      const restaurantData: any = {
+        name: name,
+        address: address,
+        description: description,
+        logoUrl: logoUrl,
+        manager: manager,
+      };
+
+      const requestApi = await api.post("restaurant", restaurantData);
+      console.log(restaurantData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  console.log(name, address, description, logoUrl, manager);
   return (
-    <>
-      <div className="container">
-        <form onSubmit={onSubmit}>
-          <div>
-            <label htmlFor="name">Nome</label>
-            <input ref={register} id="name" type="text" />
-          </div>
-          <div>
-            <label htmlFor="address">Endereço</label>
-            <input ref={register} id="address"></input>
-          </div>
-          <div>
-            <label htmlFor="description">Descrição</label>
-            <input ref={register} id="description"></input>
-          </div>
-          <div>
-            <label htmlFor="logoUrl">Imagem</label>
-            <input ref={register} id="logoUrl"></input>
-          </div>
-          <div>
-            <label htmlFor="manager">Responsável</label>
-            <input ref={register} id="manager"></input>
-          </div>
-        </form>
+    <div className="container">
+      <div className="logo">
+        <h1>JSON LOGO</h1>
       </div>
-    </>
+      <div className="containerForm ">
+        <div className="cardForm">
+          <h1>Registre-se</h1>
+          <form onSubmit={storageData}>
+            <GenericInput
+              value={name}
+              type="text"
+              placeholder="Nome do restaurante"
+              onChange={(e) => setName(e.currentTarget.value)}
+            />
+            <GenericInput
+              value={address}
+              type="text"
+              placeholder="Endereço do restaurante"
+              onChange={(e) => setAddress(e.currentTarget.value)}
+            />
+            <GenericInput
+              value={description}
+              type="text"
+              placeholder="Descrição do restaurante"
+              onChange={(e) => setDescription(e.currentTarget.value)}
+            />
+            <GenericInput
+              value={manager}
+              type="text"
+              placeholder="Responsável pelo restaurante"
+              onChange={(e) => setManager(e.currentTarget.value)}
+            />
+            <GenericInput
+              value={logoUrl}
+              type="text"
+              placeholder="Nome do restaurante"
+              onChange={(e) => setLogoUrl(e.currentTarget.value)}
+            />
+            <GenericButton
+              secondary
+              type="submit"
+              // onclick={() => goToPage("home")}
+              label={"Cadastrar restaurante"}
+            />
+          </form>
+        </div>
+      </div>
+    </div>
   );
 };
-export default Cadastro;
+
+export default Register;
