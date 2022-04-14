@@ -32,9 +32,18 @@ export class RestaurantRepository extends Repository<Restaurant> {
         'restaurant.description',
         'restaurant.logoUrl',
         'restaurant.manager',
+        'product.name',
+        'product.urlImage',
+        'product.description',
+        'product.price',
       ])
-      .getMany();
+      .leftJoinAndSelect('restaurant.products', 'product')
+      .getOne();
 
-    return queryGetRestaurants;
+    const response = {
+      restaurante: queryGetRestaurants,
+    };
+
+    return response;
   }
 }
