@@ -1,16 +1,33 @@
-import { Container, Content, MenuList, Title } from "./styles";
+import {
+  Container,
+  Content,
+  ImageContainer,
+  MenuItem,
+  MenuList,
+  MenuPrice,
+  Title,
+} from "./styles";
 
 const Menu = () => {
+  const [MenuData, setMenuData] = useState([]);
+
+  useEffect(() => {
+    api.get(`/products`).then((response: { data: any }) => {
+      setMenuData(response.data);
+    });
+  }, []);
+
   return (
     <Container>
       <Title>Menu</Title>
+
       <Content>
+        <ImageContainer>image</ImageContainer>
         <MenuList>
-          <li>name</li>
-          <li>image</li>
-          <li>description</li>
-          <li>price</li>
+          <MenuItem>name</MenuItem>
+          <MenuItem>description</MenuItem>
         </MenuList>
+        <MenuPrice>R$</MenuPrice>
       </Content>
     </Container>
   );

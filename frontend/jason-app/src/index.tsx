@@ -23,7 +23,7 @@ ReactDOM.render(
           <Route path="/home" component={Home} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
-          <Route path="/menu/:id" component={Menu} />
+          <Route path="/menu" component={Menu} />
         </Switch>
         <Footer />
       </BrowserRouter>
