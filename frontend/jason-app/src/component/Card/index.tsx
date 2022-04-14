@@ -18,7 +18,7 @@ export interface InfoData {
   name?: string;
   address?: string;
   description?: string;
-  logo?: string;
+  logoUrl?: string;
   owner?: string;
   price?: number;
   extras?: string[];
@@ -31,6 +31,7 @@ interface InfoProps {
 const Card: React.FC<InfoProps> = ({ data }: InfoProps) => {
   return (
     <Container>
+      {console.log(data)}
       {data.map((item) => {
         return (
           <CardContainer>
@@ -40,15 +41,14 @@ const Card: React.FC<InfoProps> = ({ data }: InfoProps) => {
                 <h1> {item.name} </h1>
               </CardTop>
               <CardLogo>
-                <img src={item.logo} alt="logo" />
+                <img src={item.logoUrl} alt="logo" />
               </CardLogo>
               <CardBottom>
                 <p>{item.description}</p>
                 <p>{item.address}</p>
                 <p>{item.owner}</p>
                 <Link to={"/"}>
-                  {/* <ButtonPrimary>ver cardápio</ButtonPrimary> */}
-                  <GenericButton label={"botão"} />
+                  <GenericButton label={"Ver cardápio"} />
                 </Link>
               </CardBottom>
             </Content>
