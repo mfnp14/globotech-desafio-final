@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import yellowbg from "../../assets/yellow_bg.jpg";
 
 import {
@@ -8,6 +9,7 @@ import {
   Content,
   CardBottom,
   CardLogo,
+  ButtonPrimary,
 } from "./style";
 
 export interface InfoData {
@@ -39,8 +41,12 @@ const Card: React.FC<InfoProps> = ({ data }: InfoProps) => {
                 <img src={item.logo} alt="logo" />
               </CardLogo>
               <CardBottom>
-                <p>Nulla deserunt proident eu ipsum nisi proident ad.</p>
-                <button>ver cardápio</button>
+                <p>{item.description}</p>
+                <p>{item.address}</p>
+                <p>{item.owner}</p>
+                <Link to={"/"}>
+                  <ButtonPrimary>ver cardápio</ButtonPrimary>
+                </Link>
               </CardBottom>
             </Content>
           </CardContainer>

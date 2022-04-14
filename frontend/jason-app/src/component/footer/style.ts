@@ -5,7 +5,7 @@ export const ContainerFooter = styled.div`
   width: 100%;
   height: 50px;
   text-align: center;
-  padding-top: 8px;
+  padding-top: 6px;
   position: absolute;
   display: flex;
   justify-content: center;

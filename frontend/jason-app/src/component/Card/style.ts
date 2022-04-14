@@ -7,8 +7,9 @@ export const Container = styled.div`
   flex-wrap: wrap;
   width: 80vw;
   height: auto;
-  row-gap: 100px;
+  row-gap: 150px;
   column-gap: 8px;
+  margin: 50px 0;
 `;
 
 export const CardContainer = styled.div`
@@ -55,7 +56,7 @@ export const CardTop = styled.div`
     width: 100%;
     text-align: center;
     letter-spacing: 0.05em;
-    margin-top: 20px;
+    margin-top: 30px;
     height: 40px;
   }
   > svg {
@@ -70,13 +71,13 @@ export const CardTop = styled.div`
 export const CardLogo = styled.div`
   display: flex;
   position: relative;
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   position: relative;
-  top: -20px;
+  top: 0px;
   margin: 0 auto;
   & img {
     border-radius: 100%;
@@ -87,22 +88,45 @@ export const CardLogo = styled.div`
 
 export const CardBottom = styled.div`
   background: #ffffff;
-  height: 80px;
+  height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  margin-top: 10px;
   > p {
     width: 100%;
     font-weight: 300;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 18px;
     display: flex;
     align-items: flex-start;
     text-align: center;
     justify-content: center;
     letter-spacing: 0.05em;
     color: #25282b;
-    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 10px;
+      color: #7d7d7d;
+      font-size: 12px;
+    }
+  }
+`;
+
+export const ButtonPrimary = styled.button`
+  background-color: #ffc300;
+  border: 1px solid #ffc300;
+  border-radius: 8px;
+  transition-delay: 70ms;
+  color: #fff;
+  padding: 10px 75px 10px 75px;
+
+  &:hover {
+    background-color: #5463ff;
+    border: 1px solid white;
+    transition-delay: 70ms;
+    cursor: pointer;
   }
 `;

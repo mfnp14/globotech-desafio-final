@@ -4,9 +4,9 @@ import styled from "styled-components";
 export const ContainerLanding = styled.div`
   display: flex;
   width: 80vw;
-  margin: 10px 8% 7% 5%;
+  margin: 10px 8% 6% 5%;
   justify-content: space-between;
-  //overflow: hidden;
+  overflow: hidden;
   align-items: center;
 `;
 

@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 // Pages
 import Home from "./pages/home";
 import Landing from "./pages/landing";
-import Register from "./pages/register";
+import Register from "./pages/registerRestaurant";
 import Login from "./pages/login";
 import Header from "./component/header";
 import Footer from "./component/footer";
