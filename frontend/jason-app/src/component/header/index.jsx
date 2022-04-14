@@ -24,16 +24,6 @@ const Header = () => {
           <LogoDetailBrand>{"}"}</LogoDetailBrand>
         </LogoNav>
       </Link>
-
-      <InlineContent>
-        <Link to={"/home"}>
-          <ButtonSecondary>Criar conta</ButtonSecondary>
-        </Link>
-
-        <Link to={"/home"}>
-          <ButtonPrimary>Entrar na plataforma</ButtonPrimary>
-        </Link>
-      </InlineContent>
     </ContainerHeader>
   );
 };

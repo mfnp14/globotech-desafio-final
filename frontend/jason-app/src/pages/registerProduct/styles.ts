@@ -23,7 +23,7 @@ margin-bottom: 50px;
     height: 40px;
     width: 500px;
     border-radius: 5px;
-    border: 1px solid #5463FF;
+    border: 1px solid #FFC300;
     margin-bottom: 10px;
 }
 

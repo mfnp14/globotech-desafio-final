@@ -3,6 +3,8 @@ import api from "../../services/api";
 import GenericInput from "../../component/Input";
 import GenericButton from "../../component/Button";
 import React, { useState } from "react";
+import IconLogo from "../../component/IconLogo";
+import { Container, Form } from "./styles";
 
 const RegisterProduct = () => {
   const [name, setName] = useState<string>("");
@@ -20,6 +22,8 @@ const RegisterProduct = () => {
   const storageData = async (e: any) => {
     console.log(e);
     try {
+      e.preventDefault();
+      const { name, imageUrl, description, price } = e.target.elements;
       const productData: any = {
         name: name,
         description: description,
@@ -34,19 +38,13 @@ const RegisterProduct = () => {
     }
   };
 
-  //   const convertStringToNumber = (value: string) => {
-  //     return parseFloat({price.value});
-  //   };
-
   console.log(name, description, imageUrl, price);
   return (
-    <div className="container">
-      <div className="logo">
-        <h1>JSON LOGO</h1>
-      </div>
-      <div className="containerForm ">
+    <Container>
+      <IconLogo width={300} height={300} />
+      <Form>
         <div className="cardForm">
-          <h1>Registre-se</h1>
+          <h1>Cadastre o produto</h1>
           <form onSubmit={storageData}>
             <GenericInput
               value={name}
@@ -75,13 +73,13 @@ const RegisterProduct = () => {
             <GenericButton
               secondary
               type="submit"
-              onclick={() => goToPage("menu/")}
+              onclick={() => history.push("menu")}
               label={"Cadastrar produto"}
             />
           </form>
         </div>
-      </div>
-    </div>
+      </Form>
+    </Container>
   );
 };
 
