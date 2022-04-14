@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import api from "../../services/api";
 import Card, { InfoData } from "../../component/Card";
 import {
   ButtonPrimary,
@@ -61,6 +63,16 @@ const Home = () => {
     },
   ];
 
+  const [restauranteData, setRestauranteData] = useState([]);
+
+  useEffect(() => {
+    api
+      .get(`/restaurant`)
+      .then((response) => {
+        setRestauranteData(response.data);
+      });
+  }, []);
+
   return (
     <Container>
       <HomeHeader>
@@ -74,7 +86,7 @@ const Home = () => {
 
       <HomeContent>
         <Subtitle>Meus restaurantes</Subtitle>
-        <Card data={restaurants} />
+        <Card data={restauranteData} />
       </HomeContent>
     </Container>
   );
