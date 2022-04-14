@@ -89,7 +89,7 @@ export const CardLogo = styled.div`
 
 export const CardBottom = styled.div`
   background: #ffffff;
-  height: 100px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;

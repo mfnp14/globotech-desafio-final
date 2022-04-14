@@ -43,8 +43,8 @@ const Card: React.FC<InfoProps> = ({ data }) => {
                 <img src={item.logoUrl} alt="logo" />
               </CardLogo>
               <CardBottom>
-                <p>{item.description}</p>
-                <p>{item.address}</p>
+                <p style={{ height: '50px'}}>{item.description}</p>
+                <p style={{ height: '20px', fontStyle:'italic'}}>{item.address}</p>
                 <p>{item.owner}</p>
                 <GenericButton
                   type="button"
