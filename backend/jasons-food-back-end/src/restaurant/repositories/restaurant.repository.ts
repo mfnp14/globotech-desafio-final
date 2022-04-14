@@ -44,6 +44,6 @@ export class RestaurantRepository extends Repository<Restaurant> {
       restaurante: queryGetRestaurants,
     };
 
-    return response;
+    return [response];
   }
 }
