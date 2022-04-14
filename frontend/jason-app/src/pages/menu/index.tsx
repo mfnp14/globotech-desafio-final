@@ -26,7 +26,7 @@ const Menu = () => {
   ]);
 
   useEffect(() => {
-    api.get(`/products`).then((response: { data: any }) => {
+    api.get(`/product`).then((response: { data: any }) => {
       setMenuData(response.data);
     });
   }, []);
@@ -34,9 +34,7 @@ const Menu = () => {
   return (
     <Container>
       <Title>Menu</Title>
-      {menuData.map((item) => {
-        console.log(menuData);
-        return (
+      {menuData.map((item) => (
           <Content key={item.id}>
             <ImageContainer>
               <img src={item.urlImage} alt={item.name} />
@@ -44,17 +42,16 @@ const Menu = () => {
             <MenuList>
               <MenuItem>{item.name}</MenuItem>
               <MenuItem>{item.description}</MenuItem>
-              <MenuItem>
+              {/* <MenuItem>
                 Extras:{" "}
                 {item.extras.map((extra) => {
                   return <MenuItem>{extra} </MenuItem>;
                 })}
-              </MenuItem>
+              </MenuItem> */}
             </MenuList>
             <MenuPrice>R${item.price}</MenuPrice>
           </Content>
-        );
-      })}
+        ))}
     </Container>
   );
 };
