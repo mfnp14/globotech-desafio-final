@@ -1,44 +1,33 @@
-import styled from "styled-components";
+import Styled from "styled-components";
 
-export const ButtonPrimary = styled.button`
-  background-color: #ffc300;
-  border: 1px solid #ffc300;
-  border-radius: 8px;
-  transition-delay: 70ms;
-  color: #fff;
-  padding: 10px 30px 10px 30px;
+export const Container = Styled.div`
+display:flex;
+flex-direction: column;
+width: 100%;
+justify-content: center;
+align-items: center;
 
-  &:hover {
-    background-color: #5463ff;
-    border: 1px solid white;
-    transition-delay: 70ms;
-    cursor: pointer;
-  }`;
-
-  export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-  max-width: 100%;
-  margin-bottom: 50px;
+& h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
 `;
 
-export const LogoNav = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 2%;
-  cursor: pointer;
+export const Form = Styled.form`
+display:flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 50px;
 
-  & .iconLogo {
-    margin-top: 6%;
-  }
-`;
+& input{
+    height: 40px;
+    width: 500px;
+    border-radius: 5px;
+    border: 1px solid #5463FF;
+    margin-bottom: 10px;
+}
 
-
-export const LogoDetailBrand = styled.h2`
-  font-size: 32pt;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  color: #ffc300;
+& button{
+    margin: 0 auto;
+}
 `;

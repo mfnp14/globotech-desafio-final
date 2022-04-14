@@ -3,6 +3,8 @@ import api from "../../services/api";
 import GenericInput from "../../component/Input";
 import GenericButton from "../../component/Button";
 import React, { useState } from "react";
+import { Container, Form } from "./style";
+import IconLogo from "../../component/IconLogo";
 
 const Register = () => {
   const [name, setName] = useState<string>("");
@@ -41,13 +43,11 @@ const Register = () => {
 
   console.log(name, address, description, logoUrl, manager);
   return (
-    <div className="container">
-      <div className="logo">
-        <h1>JSON LOGO</h1>
-      </div>
-      <div className="containerForm ">
+    <Container>
+      <IconLogo width={300} height={300} />
+      <Form>
         <div className="cardForm">
-          <h1>Registre-se</h1>
+          <h1>Cadastre o restaurante</h1>
           <form onSubmit={storageData}>
             <GenericInput
               value={name}
@@ -82,13 +82,13 @@ const Register = () => {
             <GenericButton
               secondary
               type="submit"
-              // onclick={() => goToPage("home")}
+              onclick={() => goToPage("home")}
               label={"Cadastrar restaurante"}
             />
           </form>
         </div>
-      </div>
-    </div>
+      </Form>
+    </Container>
   );
 };
 
