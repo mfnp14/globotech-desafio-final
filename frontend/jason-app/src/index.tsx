@@ -8,6 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/home";
 import Landing from "./pages/landing";
 import Register from "./pages/registerRestaurant";
+import RegisterProduct from "./pages/registerProduct";
 import Login from "./pages/login";
 import Header from "./component/header";
 import Footer from "./component/footer";
@@ -21,8 +22,9 @@ ReactDOM.render(
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/home" component={Home} />
-          <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/register-product" component={RegisterProduct} />
           <Route path="/menu/:id" component={Menu} />
         </Switch>
         <Footer />

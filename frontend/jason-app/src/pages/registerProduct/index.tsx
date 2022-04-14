@@ -20,6 +20,8 @@ const RegisterProduct = () => {
   const storageData = async (e: any) => {
     console.log(e);
     try {
+      e.preventDefault();
+      const { name, imageUrl, description, price } = e.target.elements;
       const productData: any = {
         name: name,
         description: description,
@@ -75,7 +77,7 @@ const RegisterProduct = () => {
             <GenericButton
               secondary
               type="submit"
-              onclick={() => goToPage("menu/")}
+              //onclick={() => goToPage("menu/")}
               label={"Cadastrar produto"}
             />
           </form>

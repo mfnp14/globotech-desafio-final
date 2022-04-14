@@ -21,9 +21,9 @@ const Register = () => {
   const storageData = async (e: any) => {
     console.log(e);
     try {
-      // e.preventDefault();
-      // const { name, address, logoUrl, description, manager } =
-      //   e.target.elements;
+      e.preventDefault();
+      const { name, address, logoUrl, description, manager } =
+        e.target.elements;
       const restaurantData: any = {
         name: name,
         address: address,
