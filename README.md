@@ -3,10 +3,10 @@
 
 A solução para visualizar rápido todos os restaurantes de sua cidade e decidir qual vai matar sua fome
 
-Projeto de integração e finalização da residência globotech Academy 
+Projeto de integração e finalização do Programa Globotech Academy 
 
 ## Para configurar o docker:
- execute : 
+ Execute
  ```
  $ docker run --jasonfood -p 5434:5434 -d postgres:9.6
 
@@ -17,22 +17,21 @@ Projeto de integração e finalização da residência globotech Academy
  ```
 
  Como acessar:
- Após clonar o repositório em sua máquina local, é necessário dar os comandos 
+ Após clonar o repositório em sua máquina local, é necessário executar o comando abaixo no terminal de acordo com o gerenciador de pacotes utilizado.
  ```
  npm install ou yarn install
  ```
- No terminal, conforme gerenciador de pacotes. Nesta etapa, o gerenciador irá instalar as dependências necessárias para rodar o projeto.
+ Nesta etapa, o gerenciador irá instalar as dependências necessárias para rodar o projeto.
 
-E, por fim, o usuário irá dar o comando 
+ E, por fim, o usuário irá chamar o comando a seguir no terminal para executar o projeto.
 ```
 'npm start' ou 'yarn start' 
 ```
-no terminal para rodar o projeto.
 
 
 ## Stack utilizada
 
-**Front-end:** React, TypeScript, Css e Html
+**Front-end:** React, TypeScript, CSS e Html
 
 **Back-end:** Node, Nest
 
@@ -45,5 +44,3 @@ no terminal para rodar o projeto.
 - [@JonissonGomes](https://github.com/JonissonGomes)
 - [@buchevitss](https://github.com/buchevitss)
 - [@maiagripp](https://github.com/maiagripp)
-
-
